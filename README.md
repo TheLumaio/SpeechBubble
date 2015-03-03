@@ -16,3 +16,6 @@ CreateBubble(ID, X, Y, TEXT, TIMEOUT)
 RemoveBubble(ID)
 ```
 * ID = Unique id of the bubble to remove
+
+# Preview
+![Preview](http://i.imgur.com/tOTHmLp.png)
