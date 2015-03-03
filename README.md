@@ -5,7 +5,7 @@ A speech bubble library for love2d
 ```lua
 CreateBubble(ID, X, Y, TEXT, TIMEOUT)
 ```
-* Adds a bubble to the pool
+Adds a bubble to the pool
 * ID = Unqiue id for the bubble.
 * X = X position
 * Y = Y position
@@ -15,6 +15,7 @@ CreateBubble(ID, X, Y, TEXT, TIMEOUT)
 ```lua
 RemoveBubble(ID)
 ```
+Removed bubble with unique id, "ID"
 * ID = Unique id of the bubble to remove
 
 # Preview
