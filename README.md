@@ -2,7 +2,7 @@
 A speech bubble library for love2d
 
 # Usage
-```
+```lua
 CreateBubble(ID, X, Y, TEXT, TIMEOUT)
 ```
 * Adds a bubble to the pool
@@ -12,7 +12,7 @@ CreateBubble(ID, X, Y, TEXT, TIMEOUT)
 * TEXT = Text to put in the bubble
 * TIMEOUT = How long the bubble stays for (in seconds)
 
-```
+```lua
 RemoveBubble(ID)
 ```
 * ID = Unique id of the bubble to remove
