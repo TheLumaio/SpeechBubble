@@ -1,5 +1,7 @@
 local Bubbles = {}
 
+local SpeechFont = love.graphics.newFont("visitor2.ttf")
+
 local function IdExists(id)
   for i,v in pairs(Bubbles) do
     if v.id == id then return true end
@@ -15,8 +17,8 @@ function CreateBubble(id, x, y, text, time)
   Bubble.y = y
   Bubble.text = text
   Bubble.time = time
-  Bubble.width = SpeachFont:getWidth(text .. " |  ")
-  Bubble.height = SpeachFont:getHeight(text .. " |  ")
+  Bubble.width = SpeechFont:getWidth(text)
+  Bubble.height = SpeechFont:getHeight(text)
   table.insert(Bubbles, Bubble)
 end
 
@@ -30,7 +32,7 @@ function DrawBubbles(dt)
       love.graphics.line(v.x-2, v.y, v.x-2, v.y + v.height + 10)
 
       love.graphics.setColor(255, 255, 255)
-      love.graphics.print(v.text .. " | " .. math.floor(v.time), v.x, v.y)
+      love.graphics.print(v.text, v.x, v.y)
       v.time = v.time - 0.015
     else
       table.remove(Bubbles, i)
