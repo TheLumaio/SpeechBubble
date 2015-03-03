@@ -1,6 +1,6 @@
 local Bubbles = {}
 
-local SpeechFont = love.graphics.newFont("visitor2.ttf")
+local SpeechFont = love.graphics.getFont()
 
 local function IdExists(id)
   for i,v in pairs(Bubbles) do
@@ -13,8 +13,8 @@ function CreateBubble(id, x, y, text, time)
   if IdExists(id) then return end
   local Bubble = {}
   Bubble.id = id
-  Bubble.x = x
-  Bubble.y = y
+  Bubble.x = math.floor(x)
+  Bubble.y = math.floor(y)
   Bubble.text = text
   Bubble.time = time
   Bubble.width = SpeechFont:getWidth(text)
